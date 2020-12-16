@@ -22,6 +22,7 @@
                 android:id="@+id/imageButton4"
                 android:layout_width="65dp"
                 android:layout_height="match_parent"
+                android:onClick="onBackButtonClicked"
                 app:srcCompat="?attr/homeAsUpIndicator" />
 
             <EditText

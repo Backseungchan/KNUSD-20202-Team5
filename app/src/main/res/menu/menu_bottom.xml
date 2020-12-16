@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/tab1"
+    <item android:id="@+id/home"
         app:showAsAction="always"
         android:icon="@drawable/home"
         android:enabled="true"
         android:checked="true"
+        android:onClick="onHomeButtonClicked"
         android:title="Home" />
     <item
-        android:id="@+id/tab2"
+        android:id="@+id/writing"
         app:showAsAction="always"
         android:icon="@drawable/edit"
         android:enabled="true"
+        android:onClick="onWritingButtonClicked"
         android:title="Writing"/>
     <item
-        android:id="@+id/tab3"
+        android:id="@+id/chatting"
         app:showAsAction="always"
         android:icon="@drawable/chat"
         android:enabled="true"
+
         android:title="Chat"/>
     <item
-        android:id="@+id/tab4"
+        android:id="@+id/myProfile"
         app:showAsAction="always"
         android:icon="@drawable/user"
         android:enabled="true"
+        android:onClick="onProfileButtonClicked"
         android:title="My profile"/>
 </menu>
 

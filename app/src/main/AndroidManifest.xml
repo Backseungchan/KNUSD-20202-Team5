@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
+        <activity android:name=".WriteActivity"></activity>
+        <activity android:name=".SearchActivity" />
         <activity android:name=".BoardActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".ViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

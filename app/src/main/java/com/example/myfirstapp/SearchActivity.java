@@ -10,4 +10,9 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
     }
+
+    public void onBackButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), BoardActivity.class);
+        startActivity(intent);
+    }
 }

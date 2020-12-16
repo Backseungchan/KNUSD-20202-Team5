@@ -10,4 +10,22 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
     }
+
+    public void onWritingButtonClicked(MenuItem mi){
+        Intent intent = new Intent(ProfileActivity.this, WriteActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onHomeButtonClicked(MenuItem mi){
+        Intent intent = new Intent(ProfileActivity.this, BoardActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onProfileButtonClicked(MenuItem mi){
+        Intent intent = new Intent(ProfileActivity.this, ProfileActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

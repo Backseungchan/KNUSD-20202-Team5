@@ -26,4 +26,28 @@ public class BoardActivity extends AppCompatActivity {
 //
 //        adapter.notifyDataSetChanged();
     }
+
+    public void onHomeButtonClicked(MenuItem mi){
+        Intent intent = new Intent(BoardActivity.this, BoardActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onWritingButtonClicked(MenuItem mi){
+        Intent intent = new Intent(BoardActivity.this, WriteActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onProfileButtonClicked(MenuItem mi){
+        Intent intent = new Intent(BoardActivity.this, ProfileActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onSearchButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -10,4 +10,9 @@ public class WriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
     }
+
+    public void onBackButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), BoardActivity.class);
+        startActivity(intent);
+    }
 }
