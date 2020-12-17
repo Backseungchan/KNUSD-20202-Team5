@@ -13,4 +13,9 @@ public class ViewActivity extends AppCompatActivity {
 //        ActionBar ab = getSupportActionBar();
 //        ab.hide();
     }
+
+    public void onBackButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), BoardActivity.class);
+        startActivity(intent);
+    }
 }

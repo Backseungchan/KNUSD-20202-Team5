@@ -5,81 +5,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".BoardActivity">
 
 
-    <ImageButton
-        android:id="@+id/button1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:padding="5dp"
-        android:src="@drawable/bell"
-        android:background="@color/bg_login"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="2dp" />
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:adjustViewBounds="true"
-        android:background="@color/bg_login"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/magnifying_glass"
-        android:onClick="onSearchButtonClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:adjustViewBounds="true"
-        android:background="@color/bg_login"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/setting_lines"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ListView
-        android:id="@+id/listview"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="286dp" />
+        android:orientation="vertical">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:background="@color/btn_login"
-        app:itemBackground="@color/btn_login"
-        app:itemIconTint="@drawable/item_color"
-        app:itemTextColor="@drawable/item_color"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/menu_bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="675dp"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_red_light"
+                android:text="KNU-RUN" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/bg_login"
+                android:onClick="onSearchButtonClicked"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/magnifying_glass" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/bg_login"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/setting_lines" />
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/bg_login"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bell" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="598dp"
+            android:choiceMode="singleChoice"
+            android:divider="#000000"
+            android:dividerHeight="0.5dp"></ListView>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/btn_login"
+            app:itemBackground="@color/btn_login"
+            app:itemIconTint="@drawable/item_color"
+            app:itemTextColor="@drawable/item_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_bottom"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
