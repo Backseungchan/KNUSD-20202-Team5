@@ -1,8 +1,10 @@
-package com.example.apptest;
+package com.example.myfirstapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -15,7 +17,12 @@ public class ViewActivity extends AppCompatActivity {
     }
 
     public void onBackButtonClicked(View v){
-        Intent intent = new Intent(getApplicationContext(), BoardActivity.class);
+        Intent intent = new Intent(getApplicationContext(), com.example.apptest.BoardActivity.class);
+        startActivity(intent);
+    }
+
+    public void onEditButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), EditActivity.class);
         startActivity(intent);
     }
 }
