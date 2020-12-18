@@ -23,6 +23,12 @@ public class ProfileActivity extends AppCompatActivity {
         finish();
     }
 
+    public void onChatlistButtonClicked(MenuItem mi){
+        Intent intent = new Intent(BoardActivity.this, ChatlistActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void onProfileButtonClicked(MenuItem mi){
         Intent intent = new Intent(ProfileActivity.this, ProfileActivity.class);
         startActivity(intent);
