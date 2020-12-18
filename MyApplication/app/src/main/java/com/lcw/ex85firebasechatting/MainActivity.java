@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
             //ChatActivity로 전환
             Intent intent= new Intent(this, ChatActivity.class);
             startActivity(intent);
-            finish();
         }else{
             //1. save작업
             saveData();
@@ -157,7 +156,5 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences=getSharedPreferences("account",MODE_PRIVATE);
         G.nickName=preferences.getString("nickName", null);
         G.porfileUrl=preferences.getString("profileUrl", null);
-
-
     }
 }
