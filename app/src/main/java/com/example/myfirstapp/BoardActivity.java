@@ -63,6 +63,12 @@ public class BoardActivity extends AppCompatActivity {
         finish();
     }
 
+    public void onChatlistButtonClicked(MenuItem mi){
+        Intent intent = new Intent(BoardActivity.this, ChatlistActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void onSearchButtonClicked(View v){
         Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
         startActivity(intent);

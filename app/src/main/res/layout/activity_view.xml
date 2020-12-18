@@ -16,7 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="278dp"
-            android:background="@android:drawable/ic_menu_camera"
+            android:background="@drawable/keanu"
             android:orientation="horizontal">
 
 
@@ -40,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onEditButtonClicked"
                 android:text="수정" />
 
             <ImageButton

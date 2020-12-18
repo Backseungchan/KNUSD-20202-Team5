@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatlistActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="620dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="492dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/yourprofile" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="311dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="남자친구 구합니다." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="492dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/yourprofile2" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="311dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="안녕하세요. ㅎㅎ" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="492dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/yourprofile3" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="311dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="프로그래밍 가르쳐주실 분" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/btn_login"
+            app:itemBackground="@color/btn_login"
+            app:itemIconTint="@drawable/item_color"
+            app:itemTextColor="@drawable/item_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_bottom"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-5dp"
+            tools:layout_editor_absoluteY="673dp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

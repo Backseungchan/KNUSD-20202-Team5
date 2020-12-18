@@ -20,7 +20,7 @@
         app:showAsAction="always"
         android:icon="@drawable/chat"
         android:enabled="true"
-
+        android:onClick="onChatlistButtonClicked"
         android:title="Chat"/>
     <item
         android:id="@+id/myProfile"
