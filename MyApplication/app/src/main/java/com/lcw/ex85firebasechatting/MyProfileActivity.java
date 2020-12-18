@@ -7,16 +7,15 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class YourProfileActivity extends AppCompatActivity {
+public class MyProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_your_profile);
+        setContentView(R.layout.activity_my_profile);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("프로필");
@@ -24,6 +23,14 @@ public class YourProfileActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         if (G.nickName.equals("Seungchan")) {
+            TextView name = findViewById(R.id.name);
+            name.setText("Seungchan");
+            ImageView profile = findViewById(R.id.profile);
+            Drawable drawable = getResources().getDrawable(R.drawable.myprofile2);
+            profile.setImageDrawable(drawable);
+            TextView email = findViewById(R.id.email);
+            email.setText("Seungchan98@knu.ac.kr");
+        } else if (G.nickName.equals("Jaehui")) {
             TextView name = findViewById(R.id.name);
             name.setText("Jaehui");
             ImageView profile = findViewById(R.id.profile);
@@ -35,30 +42,18 @@ public class YourProfileActivity extends AppCompatActivity {
             textView.setText("칭찬합니다!!");
             TextView textView2 = findViewById(R.id.textView2);
             textView2.setText("짱이에요~");
-            Button button = findViewById(R.id.button4);
-            button.setVisibility(View.GONE);
-        } else if (G.nickName.equals("Jaehui")) {
-            TextView name = findViewById(R.id.name);
-            name.setText("Seungchan");
-            ImageView profile = findViewById(R.id.profile);
-            Drawable drawable = getResources().getDrawable(R.drawable.myprofile2);
-            profile.setImageDrawable(drawable);
-            TextView email = findViewById(R.id.email);
-            email.setText("Seungchan98@knu.ac.kr");
-            Button button = findViewById(R.id.button4);
-            button.setText("주문하기");
         }
     }
 
-    public void clickBtn2(View view){
-        if ( G.nickName.equals("Jaehui")){
-            if ( OrderSuccessActivity.getState().equals("text") ){
-                Intent intent = new Intent(this, OrderActivity.class);
-                startActivity(intent);
-            }else{
-                Intent intent = new Intent(this, OrderSuccessActivity.class);
-                startActivity(intent);
-            }
-        }
+    public void clickBtn4(View view){
+//        if ( G.nickName.equals("Jaehui")){
+//            Intent intent = new Intent(this, OrderListJActivity.class);
+//            startActivity(intent);
+//        }else if ( G.nickName.equals("Seungchan")){
+//            Intent intent= new Intent(this, OrderListJActivity.class);
+//            startActivity(intent);
+//        }
+        Intent intent = new Intent(this, OrderListActivity.class);
+        startActivity(intent);
     }
 }

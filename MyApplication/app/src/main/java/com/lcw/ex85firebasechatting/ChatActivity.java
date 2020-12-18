@@ -1,7 +1,9 @@
 package com.lcw.ex85firebasechatting;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -41,7 +43,10 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         //제목줄 제목글시를 닉네임으로(또는 채팅방)
-        getSupportActionBar().setTitle(G.nickName);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(G.nickName);
+
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         et=findViewById(R.id.et);
         listView=findViewById(R.id.listview);
@@ -51,6 +56,7 @@ public class ChatActivity extends AppCompatActivity {
         //Firebase DB관리 객체와 'caht'노드 참조객체 얻어오기
         firebaseDatabase= FirebaseDatabase.getInstance();
         chatRef= firebaseDatabase.getReference("chat");
+
 
 
         //firebaseDB에서 채팅 메세지들 실시간 읽어오기..
@@ -125,9 +131,13 @@ public class ChatActivity extends AppCompatActivity {
         //즉, EditText를 감싼 Layout에게 포커스를 가지도록 속성을 추가!![[XML에]
     }
 
-    public void clickProfile(View view){
+    public void clickYourProfile(View view){
         Intent intent= new Intent(this, YourProfileActivity.class);
         startActivity(intent);
-        finish();
+    }
+
+    public void clickMyProfile(View view){
+        Intent intent= new Intent(this, MyProfileActivity.class);
+        startActivity(intent);
     }
 }
