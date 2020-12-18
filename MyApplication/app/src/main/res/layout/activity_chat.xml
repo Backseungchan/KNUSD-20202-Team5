@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="4dp"
-        android:background="#ffff4444"
+        android:background="#696969"
         android:gravity="center_vertical"
         android:focusable="true"
         android:focusableInTouchMode="true">
@@ -32,13 +32,14 @@
             android:inputType="textMultiLine"
             android:padding="10dp"
             android:maxLines="3"
-            android:background="@drawable/back_et_name"/>
+            android:background="#ffffff"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="send"
-            android:backgroundTint="#ffff4444"
+            android:backgroundTint="#ffffff"
             android:layout_marginLeft="8dp"
-            android:onClick="clickSend"/>
+            android:onClick="clickSend"
+            android:textColor="#333333"/>
     </LinearLayout>
 </LinearLayout>

@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -122,5 +123,11 @@ public class ChatActivity extends AppCompatActivity {
 
         //그게 싫으면...다른 뷰가 포커스를 가지도록
         //즉, EditText를 감싼 Layout에게 포커스를 가지도록 속성을 추가!![[XML에]
+    }
+
+    public void clickProfile(View view){
+        Intent intent= new Intent(this, YourProfileActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
